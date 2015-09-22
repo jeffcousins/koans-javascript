@@ -101,6 +101,7 @@ describe("About Applying What We Have Learnt", function() {
         return obj;
       }, {})
       .value();
+
     /* chain() together map(), flatten() and reduce() */
 
     expect(ingredientCount['mushrooms']).toBe(2);
