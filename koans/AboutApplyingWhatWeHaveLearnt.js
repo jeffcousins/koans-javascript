@@ -58,15 +58,17 @@ describe("About Applying What We Have Learnt", function() {
 
   it("should add all the natural numbers below 1000 that are multiples of 3 or 5 (functional)", function () {
     var sum = _(0).chain()
-                  .range(1000)
-                  .reduce(function(prev, next) {
-                    if (next % 3 === 0 || next % 5 === 0) {
-                      return prev + next;
-                    } else {
-                      return prev;
-                    }
-                  })
-                  .value();    /* try chaining range() and reduce() */
+      .range(1000)
+      .reduce(function(prev, next) {
+        if (next % 3 === 0 || next % 5 === 0) {
+          return prev + next;
+        } else {
+          return prev;
+        }
+      })
+      .value();
+
+      /* try chaining range() and reduce() */
 
     expect(233168).toBe(sum);
   });
@@ -111,7 +113,7 @@ describe("About Applying What We Have Learnt", function() {
   /* UNCOMMENT FOR EXTRA CREDIT */
   /*
   it("should find the largest prime factor of a composite number", function () {
-  
+  	
   });
 
   it("should find the largest palindrome made from the product of two 3 digit numbers", function () {
